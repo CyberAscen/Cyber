@@ -1,0 +1,17 @@
+flowchart TD
+ subgraph subGraph2["Digital Consciousness"]
+        H["Digital Consciousness Container"]
+  end
+ subgraph subGraph4["Physical Interaction Layer"]
+        P{"Robot Control Interface"}
+        Q["Customized Robot Body"]
+        R["Physical World"]
+  end
+    H -- (Optional) Download Instructions --> P
+    P -- Control Signals --> Q
+    Q -- Physical Interaction & Perception --> R
+    R -- Sensor Data Feedback --> Q
+    Q -- Feedback --> P
+    P -- Upload Status/Perception --> H
+
+    style Q fill:#ccf,stroke:#333,stroke-width:2px

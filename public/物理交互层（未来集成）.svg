@@ -1,0 +1,17 @@
+flowchart TD
+ subgraph subGraph2["数字意识"]
+        H["Digital Consciousness Container"]
+  end
+ subgraph subGraph4["物理交互层"]
+        P{"Robot Control Interface"}
+        Q["Customized Robot Body"]
+        R["Physical World"]
+  end
+    H -- (可选) 下载指令 --> P
+    P -- 控制信号 --> Q
+    Q -- 物理交互 & 感知 --> R
+    R -- 传感器数据反馈 --> Q
+    Q -- 反馈 --> P
+    P -- 上传状态/感知 --> H
+
+    style Q fill:#ccf,stroke:#333,stroke-width:2px

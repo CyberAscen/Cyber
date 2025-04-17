@@ -1,0 +1,18 @@
+flowchart TD
+ subgraph subGraph3["Cyber Ecosystem"]
+        L["User Wallet"]
+        M["Compute Provider Wallet"]
+        N["Cyber Token"]
+        O["Token Holders & Community"]
+        K["Smart Contract"]
+        G["Blockchain Ledger"]
+  end
+    L -- 持有 & 支付 Cyber --> K
+    K -- 支付 Cyber --> M
+    G -- 记录 Cyber 流动 --> L & M
+    N -- 为...提供动力 --> K & I[("Compute Scheduling (来自流程 2)")]
+    O -- 参与治理 & 质押 --> G & N
+    K -- 使用 --> N
+
+    style G fill:#lightgrey,stroke:#333,stroke-width:2px
+    style N fill:#fcc,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5

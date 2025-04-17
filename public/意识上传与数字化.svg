@@ -1,0 +1,141 @@
+<svg width="800" height="650" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="14">
+  <style>
+    /* General Styles */
+    .node rect {
+      stroke: #cccccc; /* Light grey border */
+      stroke-width: 1.5px;
+      fill: #4a4a4a;  /* Dark grey fill for nodes */
+      rx: 15; /* Rounded corners */
+      ry: 15; /* Rounded corners */
+    }
+    .node text {
+      fill: #e0e0e0; /* Light text color */
+      text-anchor: middle;
+      dominant-baseline: middle;
+      font-size: 13px;
+    }
+    .edge path {
+      stroke: #cccccc; /* Light grey lines */
+      stroke-width: 1.5px;
+      fill: none;
+    }
+    .edge text {
+      fill: #e0e0e0; /* Light text color */
+      font-size: 11px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      background-color: #282c34; /* Match background for clarity */
+      paint-order: stroke;
+      stroke: #282c34; /* Match background */
+      stroke-width: 4px; /* Creates a 'halo' effect */
+      stroke-linejoin: round;
+    }
+    .subgraph rect {
+      fill: #383c44; /* Slightly lighter dark grey for subgraph background */
+      stroke: #777777; /* Medium grey border for subgraph */
+      stroke-width: 1px;
+      rx: 10;
+      ry: 10;
+    }
+    .subgraph text {
+      fill: #cccccc; /* Light grey text for subgraph title */
+      text-anchor: middle;
+      font-weight: bold;
+    }
+
+    /* Specific Node Styles */
+    #node-A rect { fill: #f9f; } /* Original pinkish fill for A */
+    #node-A text { fill: #111111; } /* Dark text on light background */
+    #node-F rect, #node-G rect { fill: #aaaaaa; } /* Light grey fill for F & G */
+    #node-F text, #node-G text { fill: #111111; } /* Dark text on light background */
+
+  </style>
+
+  <rect width="100%" height="100%" fill="#282c34" />
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#cccccc" />
+    </marker>
+  </defs>
+
+  <g id="subgraph-0">
+    <rect x="50" y="30" width="300" height="170" />
+    <text x="200" y="55">用户与接口</text>
+    <g id="node-A" class="node" transform="translate(200, 120)">
+      <rect x="-60" y="-20" width="120" height="40" />
+      <text>Human User</text>
+    </g>
+    <g id="node-B" class="node" transform="translate(200, 220)">
+       <rect x="-110" y="-20" width="220" height="40" />
+       <text>Consciousness Upload Interface</text>
+    </g>
+  </g>
+
+  <g id="subgraph-1">
+     <rect x="380" y="30" width="370" height="590" />
+     <text x="565" y="55">核心处理与存储</text>
+     <g id="node-C" class="node" transform="translate(565, 120)">
+       <rect x="-140" y="-25" width="280" height="50" />
+       <text x="0" y="0" dy="0.1em" style="font-size: 12px;">Consciousness Digitization</text>
+       <text x="0" y="15" dy="0.1em" style="font-size: 12px;">& Mapping Engine</text>
+     </g>
+     <g id="node-D" class="node" transform="translate(565, 220)">
+        <rect x="-120" y="-20" width="240" height="40" />
+        <text>Fine-grained Life Data Generation</text>
+     </g>
+     <g id="node-E" class="node" transform="translate(565, 320)">
+        <rect x="-90" y="-20" width="180" height="40" />
+        <text>NFT Minting Module</text>
+     </g>
+      <g id="node-H" class="node" transform="translate(565, 420)">
+        <rect x="-140" y="-25" width="280" height="50" />
+        <text>(Output) Digital Consciousness</text>
+        <text dy="1.2em">Container</text>
+     </g>
+     <g id="node-F" class="node" transform="translate(485, 550)">
+       <rect x="-100" y="-20" width="200" height="40" />
+       <text>Decentralized Storage Network</text>
+     </g>
+     <g id="node-G" class="node" transform="translate(645, 550)">
+       <rect x="-75" y="-20" width="150" height="40" />
+       <text>Blockchain Ledger</text>
+     </g>
+  </g>
+
+  <g class="edge">
+    B -->
+    <path d="M 200 140 V 190" marker-end="url(#arrowhead)" />
+    <text x="200" y="165">提供意识</text>
+    C -->
+    <path d="M 310 220 H 425" marker-end="url(#arrowhead)" />
+    <text x="367.5" y="215" dy="-0.2em">输入</text> D -->
+    <path d="M 565 145 V 190" marker-end="url(#arrowhead)" />
+    <text x="565" y="167.5">原始意识数据</text>
+    E -->
+    <path d="M 565 240 V 290" marker-end="url(#arrowhead)" />
+    <text x="565" y="265">生成的数据</text>
+     H -->
+    <path d="M 565 340 V 390" marker-end="url(#arrowhead)" />
+    <text x="565" y="365">创建</text>
+    F -->
+    <path d="M 565 340 Q 565 440, 485 520" marker-end="url(#arrowhead)" />
+    <text x="525" y="450" text-anchor="end">
+      <tspan x="525" dy="-0.6em">NFT 元数据 & Token ID</tspan>
+      <tspan x="525" dy="1.2em">(存储容器于 F)</tspan>
+    </text>
+     G -->
+    <path d="M 565 340 Q 565 440, 645 520" marker-end="url(#arrowhead)" />
+    <text x="605" y="450" text-anchor="start">
+        <tspan x="605" dy="-0.6em">NFT 所有权记录</tspan>
+        <tspan x="605" dy="1.2em">(记录所有权于 G)</tspan>
+    </text>
+     F -->
+    <path d="M 565 445 V 520 H 515" marker-end="url(#arrowhead)" />
+    <text x="540" y="490">存储于</text>
+    G -->
+    <path d="M 565 445 V 520 H 615" marker-end="url(#arrowhead)" />
+    <text x="590" y="490">所有权记录于</text>
+  </g>
+
+</svg>
