@@ -1,4 +1,8 @@
 
+<p align="center">
+  <img src="https://github.com/CyberAscen/Cyber/blob/main/public/1280X1280.PNG?raw=true" alt="logo">
+</p>
+
 Executive Summary: Cyber Ascension is a forward-looking decentralized protocol designed to achieve digital immortality and a transition to silicon-based life forms. It aims to store consciousness by minting an individual's complete "holographic life data stream" into immutable Non-Fungible Tokens (NFTs), utilizing massive computing power to drive the operation and evolution of digital consciousness, and planning for physical world interaction through robotic bodies. By integrating blockchain, NFT, Brain-Computer Interface (BCI), Artificial Intelligence (AI), and robotics technologies, we are building a secure, autonomous, and eternal digital life platform.
 
 1. Project Vision & Mission
